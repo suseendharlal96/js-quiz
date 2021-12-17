@@ -28,6 +28,14 @@ body.correct {
 body.wrong {
   --hue: var(--hue-wrong);
 }
+
+.header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
   width: 800px;
   max-width: 80%;
@@ -52,17 +60,22 @@ body.wrong {
   padding: 5px 10px;
   color: white;
   outline: none;
+  cursor: pointer;
 }
 
 .btn:hover {
   border-color: black;
   color: black;
+  transform: scale(1.02);
 }
 .btn.correct {
   --hue: var(--hue-correct);
+  pointer-events: none;
 }
 .btn.wrong {
   --hue: var(--hue-wrong);
+  pointer-events: none;
+  cursor: no-drop;
 }
 .start-btn,
 .next-btn,
